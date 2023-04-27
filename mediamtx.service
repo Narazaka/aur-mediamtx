@@ -1,0 +1,12 @@
+[Unit]
+Description=mediamtx
+After=local-fs.target network.target multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/mediamtx /etc/conf.d/mediamtx.yml
+User=mediamtx
+Group=mediamtx
+
+[Install]
+WantedBy=multi-user.target
