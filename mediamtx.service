@@ -3,7 +3,7 @@ Description=mediamtx
 After=local-fs.target network.target multi-user.target
 
 [Service]
-Type=forking
+Type=exec
 ExecStart=/usr/bin/mediamtx /etc/conf.d/mediamtx.yml
 User=mediamtx
 Group=mediamtx
